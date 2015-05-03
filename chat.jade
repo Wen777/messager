@@ -1,0 +1,25 @@
+head
+  title Messager
+  
+  link(rel="stylesheet", type="text/css",  href="lib/main.css")
+  
+  script(type="text/javascript", src="client/icecomm.js")
+  
+body
+  h1 Chat with your friend ^_^
+  
+  hr 
+  
+  +chatbox
+  
+  hr
+    
+  +videobox
+
+template(name="chatbox")
+  .chatbox
+    each messages
+      h3 {{message}} / {{ Author }}
+      
+template(name="videobox")
+  video(id="localVideo" autoplay)
